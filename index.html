@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="button" onclick="myFunction()">fetch</button>
+  </body>
+  <script>
+    async function myFunction() {
+      try {
+        const url = "https://weather.tsukumijima.net/api/forecast/city/250010";
+        console.log(url);
+        await fetch(url);
+      } catch (e) {
+        console.log(e);
+        alert(e);
+      }
+    }
+  </script>
+</html>
